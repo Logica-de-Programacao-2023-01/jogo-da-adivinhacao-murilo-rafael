@@ -16,12 +16,7 @@ start:
 	for i := 1; i < 101; i++ {
 		var y int
 		fmt.Println("Digite um número entre 1 e 100, por favor: ")
-		_, err := fmt.Scan(&y)
-
-		if err != nil {
-			fmt.Println("Entrada inválida. Por favor, digite um número inteiro.")
-			continue
-		}
+		fmt.Scan(&y)
 
 		attempts = append(attempts, y)
 
@@ -37,12 +32,7 @@ start:
 
 			var z string
 			fmt.Println("Você deseja jogar novamente? (Digite S para Sim ou N para Não)")
-			_, err := fmt.Scan(&z)
-
-			if err != nil {
-				fmt.Println("Entrada inválida. Por favor, digite 'S' para jogar novamente ou 'N' para sair.")
-				goto start
-			}
+			fmt.Scan(&z)
 
 			if z == "S" || z == "s" {
 				goto start
